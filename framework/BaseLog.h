@@ -6,6 +6,7 @@
  ***********************************************/
  #pragma once
 #include <stdint.h>
+#include <time.h>
 
 #define LOG_DBG(fmt, args...)
 #define LOG_ERR(fmt, args...)

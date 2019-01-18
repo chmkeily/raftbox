@@ -6,6 +6,7 @@
  ***********************************************/
 #pragma once
 #include "BaseLog.h"
+#include "Define.h"
 
 struct RaftNodeData
 {
