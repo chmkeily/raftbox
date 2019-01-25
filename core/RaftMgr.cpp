@@ -1,4 +1,5 @@
 #include "RaftMgr.h"
+#include "core_proto.pb.h"
 
 int CRaftMgr::Init()
 {
