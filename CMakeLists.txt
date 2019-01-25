@@ -12,7 +12,7 @@ aux_source_directory("framework" SourceFiles)
 aux_source_directory("proto" SourceFiles)
 
 # 链接选项
-SET(COMMON_CPP_FLAGS "--std=c++11 -g -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -D_DEBUG_ -D__STDC_FORMAT_MACROS")
+set(COMMON_CPP_FLAGS "--std=c++11 -g -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -D_DEBUG_ -D__STDC_FORMAT_MACROS")
 
 #生成可执行文件
 add_executable(RaftNodeSvr ${SourceFiles})
