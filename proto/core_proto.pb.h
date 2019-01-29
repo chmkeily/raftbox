@@ -41,7 +41,7 @@ struct TableStruct_core_5fproto_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[3]
+  static const ::google::protobuf::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -49,9 +49,12 @@ struct TableStruct_core_5fproto_2eproto {
 };
 void AddDescriptors_core_5fproto_2eproto();
 namespace core {
-class CoreMsgBody;
-class CoreMsgBodyDefaultTypeInternal;
-extern CoreMsgBodyDefaultTypeInternal _CoreMsgBody_default_instance_;
+class MsgBody;
+class MsgBodyDefaultTypeInternal;
+extern MsgBodyDefaultTypeInternal _MsgBody_default_instance_;
+class MsgHead;
+class MsgHeadDefaultTypeInternal;
+extern MsgHeadDefaultTypeInternal _MsgHead_default_instance_;
 class ReqVote;
 class ReqVoteDefaultTypeInternal;
 extern ReqVoteDefaultTypeInternal _ReqVote_default_instance_;
@@ -61,7 +64,8 @@ extern RspVoteDefaultTypeInternal _RspVote_default_instance_;
 }  // namespace core
 namespace google {
 namespace protobuf {
-template<> ::core::CoreMsgBody* Arena::CreateMaybeMessage<::core::CoreMsgBody>(Arena*);
+template<> ::core::MsgBody* Arena::CreateMaybeMessage<::core::MsgBody>(Arena*);
+template<> ::core::MsgHead* Arena::CreateMaybeMessage<::core::MsgHead>(Arena*);
 template<> ::core::ReqVote* Arena::CreateMaybeMessage<::core::ReqVote>(Arena*);
 template<> ::core::RspVote* Arena::CreateMaybeMessage<::core::RspVote>(Arena*);
 }  // namespace protobuf
@@ -165,21 +169,21 @@ class ReqVote final :
 
   // accessors -------------------------------------------------------
 
-  // uint32 newterm = 1;
-  void clear_newterm();
-  static const int kNewtermFieldNumber = 1;
-  ::google::protobuf::uint32 newterm() const;
-  void set_newterm(::google::protobuf::uint32 value);
+  // uint32 Term = 1;
+  void clear_term();
+  static const int kTermFieldNumber = 1;
+  ::google::protobuf::uint32 term() const;
+  void set_term(::google::protobuf::uint32 value);
 
-  // uint32 nodeid = 2;
+  // uint32 NodeId = 2;
   void clear_nodeid();
-  static const int kNodeidFieldNumber = 2;
+  static const int kNodeIdFieldNumber = 2;
   ::google::protobuf::uint32 nodeid() const;
   void set_nodeid(::google::protobuf::uint32 value);
 
-  // uint64 commitlogindex = 3;
+  // uint64 CommitLogIndex = 3;
   void clear_commitlogindex();
-  static const int kCommitlogindexFieldNumber = 3;
+  static const int kCommitLogIndexFieldNumber = 3;
   ::google::protobuf::uint64 commitlogindex() const;
   void set_commitlogindex(::google::protobuf::uint64 value);
 
@@ -188,7 +192,7 @@ class ReqVote final :
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 newterm_;
+  ::google::protobuf::uint32 term_;
   ::google::protobuf::uint32 nodeid_;
   ::google::protobuf::uint64 commitlogindex_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -291,27 +295,27 @@ class RspVote final :
 
   // accessors -------------------------------------------------------
 
-  // sint32 result = 1;
+  // sint32 Result = 1;
   void clear_result();
   static const int kResultFieldNumber = 1;
   ::google::protobuf::int32 result() const;
   void set_result(::google::protobuf::int32 value);
 
-  // uint32 newterm = 2;
-  void clear_newterm();
-  static const int kNewtermFieldNumber = 2;
-  ::google::protobuf::uint32 newterm() const;
-  void set_newterm(::google::protobuf::uint32 value);
+  // uint32 Term = 2;
+  void clear_term();
+  static const int kTermFieldNumber = 2;
+  ::google::protobuf::uint32 term() const;
+  void set_term(::google::protobuf::uint32 value);
 
-  // uint32 nodeid = 3;
+  // uint32 NodeId = 3;
   void clear_nodeid();
-  static const int kNodeidFieldNumber = 3;
+  static const int kNodeIdFieldNumber = 3;
   ::google::protobuf::uint32 nodeid() const;
   void set_nodeid(::google::protobuf::uint32 value);
 
-  // uint32 leaderid = 4;
+  // uint32 LeaderId = 4;
   void clear_leaderid();
-  static const int kLeaderidFieldNumber = 4;
+  static const int kLeaderIdFieldNumber = 4;
   ::google::protobuf::uint32 leaderid() const;
   void set_leaderid(::google::protobuf::uint32 value);
 
@@ -321,7 +325,7 @@ class RspVote final :
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::int32 result_;
-  ::google::protobuf::uint32 newterm_;
+  ::google::protobuf::uint32 term_;
   ::google::protobuf::uint32 nodeid_;
   ::google::protobuf::uint32 leaderid_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
@@ -329,25 +333,25 @@ class RspVote final :
 };
 // -------------------------------------------------------------------
 
-class CoreMsgBody final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.CoreMsgBody) */ {
+class MsgHead final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.MsgHead) */ {
  public:
-  CoreMsgBody();
-  virtual ~CoreMsgBody();
+  MsgHead();
+  virtual ~MsgHead();
 
-  CoreMsgBody(const CoreMsgBody& from);
+  MsgHead(const MsgHead& from);
 
-  inline CoreMsgBody& operator=(const CoreMsgBody& from) {
+  inline MsgHead& operator=(const MsgHead& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  CoreMsgBody(CoreMsgBody&& from) noexcept
-    : CoreMsgBody() {
+  MsgHead(MsgHead&& from) noexcept
+    : MsgHead() {
     *this = ::std::move(from);
   }
 
-  inline CoreMsgBody& operator=(CoreMsgBody&& from) noexcept {
+  inline MsgHead& operator=(MsgHead&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -359,40 +363,34 @@ class CoreMsgBody final :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const CoreMsgBody& default_instance();
-
-  enum StBodyCase {
-    kStReqVote = 1,
-    kStRspVote = 2,
-    STBODY_NOT_SET = 0,
-  };
+  static const MsgHead& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const CoreMsgBody* internal_default_instance() {
-    return reinterpret_cast<const CoreMsgBody*>(
-               &_CoreMsgBody_default_instance_);
+  static inline const MsgHead* internal_default_instance() {
+    return reinterpret_cast<const MsgHead*>(
+               &_MsgHead_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  void Swap(CoreMsgBody* other);
-  friend void swap(CoreMsgBody& a, CoreMsgBody& b) {
+  void Swap(MsgHead* other);
+  friend void swap(MsgHead& a, MsgHead& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline CoreMsgBody* New() const final {
-    return CreateMaybeMessage<CoreMsgBody>(nullptr);
+  inline MsgHead* New() const final {
+    return CreateMaybeMessage<MsgHead>(nullptr);
   }
 
-  CoreMsgBody* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<CoreMsgBody>(arena);
+  MsgHead* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<MsgHead>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const CoreMsgBody& from);
-  void MergeFrom(const CoreMsgBody& from);
+  void CopyFrom(const MsgHead& from);
+  void MergeFrom(const MsgHead& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -414,7 +412,139 @@ class CoreMsgBody final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(CoreMsgBody* other);
+  void InternalSwap(MsgHead* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint32 MsgId = 1;
+  void clear_msgid();
+  static const int kMsgIdFieldNumber = 1;
+  ::google::protobuf::uint32 msgid() const;
+  void set_msgid(::google::protobuf::uint32 value);
+
+  // uint32 SrcAddr = 2;
+  void clear_srcaddr();
+  static const int kSrcAddrFieldNumber = 2;
+  ::google::protobuf::uint32 srcaddr() const;
+  void set_srcaddr(::google::protobuf::uint32 value);
+
+  // uint32 DstAddr = 3;
+  void clear_dstaddr();
+  static const int kDstAddrFieldNumber = 3;
+  ::google::protobuf::uint32 dstaddr() const;
+  void set_dstaddr(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:core.MsgHead)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint32 msgid_;
+  ::google::protobuf::uint32 srcaddr_;
+  ::google::protobuf::uint32 dstaddr_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_core_5fproto_2eproto;
+};
+// -------------------------------------------------------------------
+
+class MsgBody final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.MsgBody) */ {
+ public:
+  MsgBody();
+  virtual ~MsgBody();
+
+  MsgBody(const MsgBody& from);
+
+  inline MsgBody& operator=(const MsgBody& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  MsgBody(MsgBody&& from) noexcept
+    : MsgBody() {
+    *this = ::std::move(from);
+  }
+
+  inline MsgBody& operator=(MsgBody&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const MsgBody& default_instance();
+
+  enum StBodyCase {
+    kStReqVote = 1,
+    kStRspVote = 2,
+    STBODY_NOT_SET = 0,
+  };
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const MsgBody* internal_default_instance() {
+    return reinterpret_cast<const MsgBody*>(
+               &_MsgBody_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  void Swap(MsgBody* other);
+  friend void swap(MsgBody& a, MsgBody& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline MsgBody* New() const final {
+    return CreateMaybeMessage<MsgBody>(nullptr);
+  }
+
+  MsgBody* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<MsgBody>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const MsgBody& from);
+  void MergeFrom(const MsgBody& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(MsgBody* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -450,7 +580,7 @@ class CoreMsgBody final :
 
   void clear_stBody();
   StBodyCase stBody_case() const;
-  // @@protoc_insertion_point(class_scope:core.CoreMsgBody)
+  // @@protoc_insertion_point(class_scope:core.MsgBody)
  private:
   class HasBitSetters;
   void set_has_streqvote();
@@ -481,127 +611,173 @@ class CoreMsgBody final :
 #endif  // __GNUC__
 // ReqVote
 
-// uint32 newterm = 1;
-inline void ReqVote::clear_newterm() {
-  newterm_ = 0u;
+// uint32 Term = 1;
+inline void ReqVote::clear_term() {
+  term_ = 0u;
 }
-inline ::google::protobuf::uint32 ReqVote::newterm() const {
-  // @@protoc_insertion_point(field_get:core.ReqVote.newterm)
-  return newterm_;
+inline ::google::protobuf::uint32 ReqVote::term() const {
+  // @@protoc_insertion_point(field_get:core.ReqVote.Term)
+  return term_;
 }
-inline void ReqVote::set_newterm(::google::protobuf::uint32 value) {
+inline void ReqVote::set_term(::google::protobuf::uint32 value) {
   
-  newterm_ = value;
-  // @@protoc_insertion_point(field_set:core.ReqVote.newterm)
+  term_ = value;
+  // @@protoc_insertion_point(field_set:core.ReqVote.Term)
 }
 
-// uint32 nodeid = 2;
+// uint32 NodeId = 2;
 inline void ReqVote::clear_nodeid() {
   nodeid_ = 0u;
 }
 inline ::google::protobuf::uint32 ReqVote::nodeid() const {
-  // @@protoc_insertion_point(field_get:core.ReqVote.nodeid)
+  // @@protoc_insertion_point(field_get:core.ReqVote.NodeId)
   return nodeid_;
 }
 inline void ReqVote::set_nodeid(::google::protobuf::uint32 value) {
   
   nodeid_ = value;
-  // @@protoc_insertion_point(field_set:core.ReqVote.nodeid)
+  // @@protoc_insertion_point(field_set:core.ReqVote.NodeId)
 }
 
-// uint64 commitlogindex = 3;
+// uint64 CommitLogIndex = 3;
 inline void ReqVote::clear_commitlogindex() {
   commitlogindex_ = PROTOBUF_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 ReqVote::commitlogindex() const {
-  // @@protoc_insertion_point(field_get:core.ReqVote.commitlogindex)
+  // @@protoc_insertion_point(field_get:core.ReqVote.CommitLogIndex)
   return commitlogindex_;
 }
 inline void ReqVote::set_commitlogindex(::google::protobuf::uint64 value) {
   
   commitlogindex_ = value;
-  // @@protoc_insertion_point(field_set:core.ReqVote.commitlogindex)
+  // @@protoc_insertion_point(field_set:core.ReqVote.CommitLogIndex)
 }
 
 // -------------------------------------------------------------------
 
 // RspVote
 
-// sint32 result = 1;
+// sint32 Result = 1;
 inline void RspVote::clear_result() {
   result_ = 0;
 }
 inline ::google::protobuf::int32 RspVote::result() const {
-  // @@protoc_insertion_point(field_get:core.RspVote.result)
+  // @@protoc_insertion_point(field_get:core.RspVote.Result)
   return result_;
 }
 inline void RspVote::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:core.RspVote.result)
+  // @@protoc_insertion_point(field_set:core.RspVote.Result)
 }
 
-// uint32 newterm = 2;
-inline void RspVote::clear_newterm() {
-  newterm_ = 0u;
+// uint32 Term = 2;
+inline void RspVote::clear_term() {
+  term_ = 0u;
 }
-inline ::google::protobuf::uint32 RspVote::newterm() const {
-  // @@protoc_insertion_point(field_get:core.RspVote.newterm)
-  return newterm_;
+inline ::google::protobuf::uint32 RspVote::term() const {
+  // @@protoc_insertion_point(field_get:core.RspVote.Term)
+  return term_;
 }
-inline void RspVote::set_newterm(::google::protobuf::uint32 value) {
+inline void RspVote::set_term(::google::protobuf::uint32 value) {
   
-  newterm_ = value;
-  // @@protoc_insertion_point(field_set:core.RspVote.newterm)
+  term_ = value;
+  // @@protoc_insertion_point(field_set:core.RspVote.Term)
 }
 
-// uint32 nodeid = 3;
+// uint32 NodeId = 3;
 inline void RspVote::clear_nodeid() {
   nodeid_ = 0u;
 }
 inline ::google::protobuf::uint32 RspVote::nodeid() const {
-  // @@protoc_insertion_point(field_get:core.RspVote.nodeid)
+  // @@protoc_insertion_point(field_get:core.RspVote.NodeId)
   return nodeid_;
 }
 inline void RspVote::set_nodeid(::google::protobuf::uint32 value) {
   
   nodeid_ = value;
-  // @@protoc_insertion_point(field_set:core.RspVote.nodeid)
+  // @@protoc_insertion_point(field_set:core.RspVote.NodeId)
 }
 
-// uint32 leaderid = 4;
+// uint32 LeaderId = 4;
 inline void RspVote::clear_leaderid() {
   leaderid_ = 0u;
 }
 inline ::google::protobuf::uint32 RspVote::leaderid() const {
-  // @@protoc_insertion_point(field_get:core.RspVote.leaderid)
+  // @@protoc_insertion_point(field_get:core.RspVote.LeaderId)
   return leaderid_;
 }
 inline void RspVote::set_leaderid(::google::protobuf::uint32 value) {
   
   leaderid_ = value;
-  // @@protoc_insertion_point(field_set:core.RspVote.leaderid)
+  // @@protoc_insertion_point(field_set:core.RspVote.LeaderId)
 }
 
 // -------------------------------------------------------------------
 
-// CoreMsgBody
+// MsgHead
+
+// uint32 MsgId = 1;
+inline void MsgHead::clear_msgid() {
+  msgid_ = 0u;
+}
+inline ::google::protobuf::uint32 MsgHead::msgid() const {
+  // @@protoc_insertion_point(field_get:core.MsgHead.MsgId)
+  return msgid_;
+}
+inline void MsgHead::set_msgid(::google::protobuf::uint32 value) {
+  
+  msgid_ = value;
+  // @@protoc_insertion_point(field_set:core.MsgHead.MsgId)
+}
+
+// uint32 SrcAddr = 2;
+inline void MsgHead::clear_srcaddr() {
+  srcaddr_ = 0u;
+}
+inline ::google::protobuf::uint32 MsgHead::srcaddr() const {
+  // @@protoc_insertion_point(field_get:core.MsgHead.SrcAddr)
+  return srcaddr_;
+}
+inline void MsgHead::set_srcaddr(::google::protobuf::uint32 value) {
+  
+  srcaddr_ = value;
+  // @@protoc_insertion_point(field_set:core.MsgHead.SrcAddr)
+}
+
+// uint32 DstAddr = 3;
+inline void MsgHead::clear_dstaddr() {
+  dstaddr_ = 0u;
+}
+inline ::google::protobuf::uint32 MsgHead::dstaddr() const {
+  // @@protoc_insertion_point(field_get:core.MsgHead.DstAddr)
+  return dstaddr_;
+}
+inline void MsgHead::set_dstaddr(::google::protobuf::uint32 value) {
+  
+  dstaddr_ = value;
+  // @@protoc_insertion_point(field_set:core.MsgHead.DstAddr)
+}
+
+// -------------------------------------------------------------------
+
+// MsgBody
 
 // .core.ReqVote stReqVote = 1;
-inline bool CoreMsgBody::has_streqvote() const {
+inline bool MsgBody::has_streqvote() const {
   return stBody_case() == kStReqVote;
 }
-inline void CoreMsgBody::set_has_streqvote() {
+inline void MsgBody::set_has_streqvote() {
   _oneof_case_[0] = kStReqVote;
 }
-inline void CoreMsgBody::clear_streqvote() {
+inline void MsgBody::clear_streqvote() {
   if (has_streqvote()) {
     delete stBody_.streqvote_;
     clear_has_stBody();
   }
 }
-inline ::core::ReqVote* CoreMsgBody::release_streqvote() {
-  // @@protoc_insertion_point(field_release:core.CoreMsgBody.stReqVote)
+inline ::core::ReqVote* MsgBody::release_streqvote() {
+  // @@protoc_insertion_point(field_release:core.MsgBody.stReqVote)
   if (has_streqvote()) {
     clear_has_stBody();
       ::core::ReqVote* temp = stBody_.streqvote_;
@@ -611,38 +787,38 @@ inline ::core::ReqVote* CoreMsgBody::release_streqvote() {
     return nullptr;
   }
 }
-inline const ::core::ReqVote& CoreMsgBody::streqvote() const {
-  // @@protoc_insertion_point(field_get:core.CoreMsgBody.stReqVote)
+inline const ::core::ReqVote& MsgBody::streqvote() const {
+  // @@protoc_insertion_point(field_get:core.MsgBody.stReqVote)
   return has_streqvote()
       ? *stBody_.streqvote_
       : *reinterpret_cast< ::core::ReqVote*>(&::core::_ReqVote_default_instance_);
 }
-inline ::core::ReqVote* CoreMsgBody::mutable_streqvote() {
+inline ::core::ReqVote* MsgBody::mutable_streqvote() {
   if (!has_streqvote()) {
     clear_stBody();
     set_has_streqvote();
     stBody_.streqvote_ = CreateMaybeMessage< ::core::ReqVote >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:core.CoreMsgBody.stReqVote)
+  // @@protoc_insertion_point(field_mutable:core.MsgBody.stReqVote)
   return stBody_.streqvote_;
 }
 
 // .core.RspVote stRspVote = 2;
-inline bool CoreMsgBody::has_strspvote() const {
+inline bool MsgBody::has_strspvote() const {
   return stBody_case() == kStRspVote;
 }
-inline void CoreMsgBody::set_has_strspvote() {
+inline void MsgBody::set_has_strspvote() {
   _oneof_case_[0] = kStRspVote;
 }
-inline void CoreMsgBody::clear_strspvote() {
+inline void MsgBody::clear_strspvote() {
   if (has_strspvote()) {
     delete stBody_.strspvote_;
     clear_has_stBody();
   }
 }
-inline ::core::RspVote* CoreMsgBody::release_strspvote() {
-  // @@protoc_insertion_point(field_release:core.CoreMsgBody.stRspVote)
+inline ::core::RspVote* MsgBody::release_strspvote() {
+  // @@protoc_insertion_point(field_release:core.MsgBody.stRspVote)
   if (has_strspvote()) {
     clear_has_stBody();
       ::core::RspVote* temp = stBody_.strspvote_;
@@ -652,35 +828,37 @@ inline ::core::RspVote* CoreMsgBody::release_strspvote() {
     return nullptr;
   }
 }
-inline const ::core::RspVote& CoreMsgBody::strspvote() const {
-  // @@protoc_insertion_point(field_get:core.CoreMsgBody.stRspVote)
+inline const ::core::RspVote& MsgBody::strspvote() const {
+  // @@protoc_insertion_point(field_get:core.MsgBody.stRspVote)
   return has_strspvote()
       ? *stBody_.strspvote_
       : *reinterpret_cast< ::core::RspVote*>(&::core::_RspVote_default_instance_);
 }
-inline ::core::RspVote* CoreMsgBody::mutable_strspvote() {
+inline ::core::RspVote* MsgBody::mutable_strspvote() {
   if (!has_strspvote()) {
     clear_stBody();
     set_has_strspvote();
     stBody_.strspvote_ = CreateMaybeMessage< ::core::RspVote >(
         GetArenaNoVirtual());
   }
-  // @@protoc_insertion_point(field_mutable:core.CoreMsgBody.stRspVote)
+  // @@protoc_insertion_point(field_mutable:core.MsgBody.stRspVote)
   return stBody_.strspvote_;
 }
 
-inline bool CoreMsgBody::has_stBody() const {
+inline bool MsgBody::has_stBody() const {
   return stBody_case() != STBODY_NOT_SET;
 }
-inline void CoreMsgBody::clear_has_stBody() {
+inline void MsgBody::clear_has_stBody() {
   _oneof_case_[0] = STBODY_NOT_SET;
 }
-inline CoreMsgBody::StBodyCase CoreMsgBody::stBody_case() const {
-  return CoreMsgBody::StBodyCase(_oneof_case_[0]);
+inline MsgBody::StBodyCase MsgBody::stBody_case() const {
+  return MsgBody::StBodyCase(_oneof_case_[0]);
 }
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

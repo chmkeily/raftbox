@@ -2,22 +2,32 @@ syntax="proto3";
 
 package core;
 
+//候选人请求投票
 message ReqVote
 {
-    uint32 newterm = 1;
-    uint32 nodeid = 2;
-    uint64 commitlogindex = 3;
+    uint32 Term = 1;    //任期号
+    uint32 NodeId = 2;  //候选人节点号
+    uint64 CommitLogIndex = 3;  //候选人最新提交日志号
 }
 
+//响应候选人投票
 message RspVote
 {
-    sint32 result = 1;
-    uint32 newterm = 2;
-    uint32 nodeid = 3;
-    uint32 leaderid = 4;
+    sint32 Result = 1;  //投票结果(0表示获得投票)
+    uint32 Term = 2;    //投票人认可的当前任期
+    uint32 NodeId = 3;  //投票人节点号
+    uint32 LeaderId = 4;    //投票人认可的当前领导人
 }
 
-message CoreMsgBody
+
+message MsgHead
+{
+    uint32 MsgId = 1;   //消息ID
+    uint32 SrcAddr = 2; //源地址
+    uint32 DstAddr = 3; //目标地址
+}
+
+message MsgBody
 {
     oneof stBody
     {
