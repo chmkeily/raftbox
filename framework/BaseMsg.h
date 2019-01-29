@@ -7,8 +7,17 @@
  
 #pragma once
 #include <stdint.h>
+#include <string.h>
+#include "core_proto.pb.h"
 
-#define MAX_MSG_BUFF_SIZE   102400
+#define MAX_MSG_NET_BUFF_LEN    102400
+
+namespace core
+{
+    class MsgHead;
+    class MsgBody;
+    class MsgPKG;
+}
 
 class CBaseMsg
 {
@@ -16,7 +25,10 @@ public:
     CBaseMsg();
     virtual ~CBaseMsg();
 
+    int EncodeMsg();
+    int DecodeMsg();
+
 private:
-    uint8_t     m_bMsgType;
-    char        m_szMsgBuff[MAX_MSG_BUFF_SIZE];
+    core::MsgPKG    m_stMsgPkg;
+    char            m_szNetBuff[MAX_MSG_NET_BUFF_LEN];
 };
