@@ -16,8 +16,10 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
+extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_MsgHead_core_5fproto_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ReqVote_core_5fproto_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_RspVote_core_5fproto_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_MsgBody_core_5fproto_2eproto;
 namespace core {
 class ReqVoteDefaultTypeInternal {
  public:
@@ -37,6 +39,10 @@ class MsgBodyDefaultTypeInternal {
   const ::core::ReqVote* streqvote_;
   const ::core::RspVote* strspvote_;
 } _MsgBody_default_instance_;
+class MsgPKGDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<MsgPKG> _instance;
+} _MsgPKG_default_instance_;
 }  // namespace core
 static void InitDefaultsReqVote_core_5fproto_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -96,14 +102,31 @@ static void InitDefaultsMsgBody_core_5fproto_2eproto() {
       &scc_info_ReqVote_core_5fproto_2eproto.base,
       &scc_info_RspVote_core_5fproto_2eproto.base,}};
 
+static void InitDefaultsMsgPKG_core_5fproto_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::core::_MsgPKG_default_instance_;
+    new (ptr) ::core::MsgPKG();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::core::MsgPKG::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_MsgPKG_core_5fproto_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsMsgPKG_core_5fproto_2eproto}, {
+      &scc_info_MsgHead_core_5fproto_2eproto.base,
+      &scc_info_MsgBody_core_5fproto_2eproto.base,}};
+
 void InitDefaults_core_5fproto_2eproto() {
   ::google::protobuf::internal::InitSCC(&scc_info_ReqVote_core_5fproto_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_RspVote_core_5fproto_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_MsgHead_core_5fproto_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_MsgBody_core_5fproto_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_MsgPKG_core_5fproto_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_core_5fproto_2eproto[4];
+::google::protobuf::Metadata file_level_metadata_core_5fproto_2eproto[5];
 constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_core_5fproto_2eproto = nullptr;
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_core_5fproto_2eproto = nullptr;
 
@@ -141,12 +164,20 @@ const ::google::protobuf::uint32 TableStruct_core_5fproto_2eproto::offsets[] PRO
   offsetof(::core::MsgBodyDefaultTypeInternal, streqvote_),
   offsetof(::core::MsgBodyDefaultTypeInternal, strspvote_),
   PROTOBUF_FIELD_OFFSET(::core::MsgBody, stBody_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::core::MsgPKG, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::core::MsgPKG, sthead_),
+  PROTOBUF_FIELD_OFFSET(::core::MsgPKG, stbody_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::core::ReqVote)},
   { 8, -1, sizeof(::core::RspVote)},
   { 17, -1, sizeof(::core::MsgHead)},
   { 25, -1, sizeof(::core::MsgBody)},
+  { 33, -1, sizeof(::core::MsgPKG)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -154,12 +185,13 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::core::_RspVote_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::core::_MsgHead_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::core::_MsgBody_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::core::_MsgPKG_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_core_5fproto_2eproto = {
   {}, AddDescriptors_core_5fproto_2eproto, "core_proto.proto", schemas,
   file_default_instances, TableStruct_core_5fproto_2eproto::offsets,
-  file_level_metadata_core_5fproto_2eproto, 4, file_level_enum_descriptors_core_5fproto_2eproto, file_level_service_descriptors_core_5fproto_2eproto,
+  file_level_metadata_core_5fproto_2eproto, 5, file_level_enum_descriptors_core_5fproto_2eproto, file_level_service_descriptors_core_5fproto_2eproto,
 };
 
 const char descriptor_table_protodef_core_5fproto_2eproto[] =
@@ -170,13 +202,14 @@ const char descriptor_table_protodef_core_5fproto_2eproto[] =
   " \001(\r\":\n\007MsgHead\022\r\n\005MsgId\030\001 \001(\r\022\017\n\007SrcAdd"
   "r\030\002 \001(\r\022\017\n\007DstAddr\030\003 \001(\r\"[\n\007MsgBody\022\"\n\ts"
   "tReqVote\030\001 \001(\0132\r.core.ReqVoteH\000\022\"\n\tstRsp"
-  "Vote\030\002 \001(\0132\r.core.RspVoteH\000B\010\n\006stBodyb\006p"
-  "roto3"
+  "Vote\030\002 \001(\0132\r.core.RspVoteH\000B\010\n\006stBody\"F\n"
+  "\006MsgPKG\022\035\n\006stHead\030\001 \001(\0132\r.core.MsgHead\022\035"
+  "\n\006stBody\030\002 \001(\0132\r.core.MsgBodyb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_core_5fproto_2eproto = {
   false, InitDefaults_core_5fproto_2eproto, 
   descriptor_table_protodef_core_5fproto_2eproto,
-  "core_proto.proto", &assign_descriptors_table_core_5fproto_2eproto, 325,
+  "core_proto.proto", &assign_descriptors_table_core_5fproto_2eproto, 397,
 };
 
 void AddDescriptors_core_5fproto_2eproto() {
@@ -1692,6 +1725,361 @@ void MsgBody::InternalSwap(MsgBody* other) {
 }
 
 
+// ===================================================================
+
+void MsgPKG::InitAsDefaultInstance() {
+  ::core::_MsgPKG_default_instance_._instance.get_mutable()->sthead_ = const_cast< ::core::MsgHead*>(
+      ::core::MsgHead::internal_default_instance());
+  ::core::_MsgPKG_default_instance_._instance.get_mutable()->stbody_ = const_cast< ::core::MsgBody*>(
+      ::core::MsgBody::internal_default_instance());
+}
+class MsgPKG::HasBitSetters {
+ public:
+  static const ::core::MsgHead& sthead(const MsgPKG* msg);
+  static const ::core::MsgBody& stbody(const MsgPKG* msg);
+};
+
+const ::core::MsgHead&
+MsgPKG::HasBitSetters::sthead(const MsgPKG* msg) {
+  return *msg->sthead_;
+}
+const ::core::MsgBody&
+MsgPKG::HasBitSetters::stbody(const MsgPKG* msg) {
+  return *msg->stbody_;
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int MsgPKG::kStHeadFieldNumber;
+const int MsgPKG::kStBodyFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+MsgPKG::MsgPKG()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:core.MsgPKG)
+}
+MsgPKG::MsgPKG(const MsgPKG& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_sthead()) {
+    sthead_ = new ::core::MsgHead(*from.sthead_);
+  } else {
+    sthead_ = nullptr;
+  }
+  if (from.has_stbody()) {
+    stbody_ = new ::core::MsgBody(*from.stbody_);
+  } else {
+    stbody_ = nullptr;
+  }
+  // @@protoc_insertion_point(copy_constructor:core.MsgPKG)
+}
+
+void MsgPKG::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_MsgPKG_core_5fproto_2eproto.base);
+  ::memset(&sthead_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&stbody_) -
+      reinterpret_cast<char*>(&sthead_)) + sizeof(stbody_));
+}
+
+MsgPKG::~MsgPKG() {
+  // @@protoc_insertion_point(destructor:core.MsgPKG)
+  SharedDtor();
+}
+
+void MsgPKG::SharedDtor() {
+  if (this != internal_default_instance()) delete sthead_;
+  if (this != internal_default_instance()) delete stbody_;
+}
+
+void MsgPKG::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const MsgPKG& MsgPKG::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_MsgPKG_core_5fproto_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void MsgPKG::Clear() {
+// @@protoc_insertion_point(message_clear_start:core.MsgPKG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArenaNoVirtual() == nullptr && sthead_ != nullptr) {
+    delete sthead_;
+  }
+  sthead_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && stbody_ != nullptr) {
+    delete stbody_;
+  }
+  stbody_ = nullptr;
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* MsgPKG::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<MsgPKG*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .core.MsgHead stHead = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::core::MsgHead::_InternalParse;
+        object = msg->mutable_sthead();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .core.MsgBody stBody = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::core::MsgBody::_InternalParse;
+        object = msg->mutable_stbody();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool MsgPKG::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:core.MsgPKG)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .core.MsgHead stHead = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_sthead()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .core.MsgBody stBody = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_stbody()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:core.MsgPKG)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:core.MsgPKG)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void MsgPKG::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:core.MsgPKG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .core.MsgHead stHead = 1;
+  if (this->has_sthead()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::sthead(this), output);
+  }
+
+  // .core.MsgBody stBody = 2;
+  if (this->has_stbody()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::stbody(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:core.MsgPKG)
+}
+
+::google::protobuf::uint8* MsgPKG::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:core.MsgPKG)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .core.MsgHead stHead = 1;
+  if (this->has_sthead()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::sthead(this), target);
+  }
+
+  // .core.MsgBody stBody = 2;
+  if (this->has_stbody()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::stbody(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:core.MsgPKG)
+  return target;
+}
+
+size_t MsgPKG::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:core.MsgPKG)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .core.MsgHead stHead = 1;
+  if (this->has_sthead()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *sthead_);
+  }
+
+  // .core.MsgBody stBody = 2;
+  if (this->has_stbody()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSize(
+        *stbody_);
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void MsgPKG::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:core.MsgPKG)
+  GOOGLE_DCHECK_NE(&from, this);
+  const MsgPKG* source =
+      ::google::protobuf::DynamicCastToGenerated<MsgPKG>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:core.MsgPKG)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:core.MsgPKG)
+    MergeFrom(*source);
+  }
+}
+
+void MsgPKG::MergeFrom(const MsgPKG& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:core.MsgPKG)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_sthead()) {
+    mutable_sthead()->::core::MsgHead::MergeFrom(from.sthead());
+  }
+  if (from.has_stbody()) {
+    mutable_stbody()->::core::MsgBody::MergeFrom(from.stbody());
+  }
+}
+
+void MsgPKG::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:core.MsgPKG)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MsgPKG::CopyFrom(const MsgPKG& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:core.MsgPKG)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MsgPKG::IsInitialized() const {
+  return true;
+}
+
+void MsgPKG::Swap(MsgPKG* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MsgPKG::InternalSwap(MsgPKG* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(sthead_, other->sthead_);
+  swap(stbody_, other->stbody_);
+}
+
+::google::protobuf::Metadata MsgPKG::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_core_5fproto_2eproto);
+  return ::file_level_metadata_core_5fproto_2eproto[kIndexInFileMessages];
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace core
 namespace google {
@@ -1707,6 +2095,9 @@ template<> PROTOBUF_NOINLINE ::core::MsgHead* Arena::CreateMaybeMessage< ::core:
 }
 template<> PROTOBUF_NOINLINE ::core::MsgBody* Arena::CreateMaybeMessage< ::core::MsgBody >(Arena* arena) {
   return Arena::CreateInternal< ::core::MsgBody >(arena);
+}
+template<> PROTOBUF_NOINLINE ::core::MsgPKG* Arena::CreateMaybeMessage< ::core::MsgPKG >(Arena* arena) {
+  return Arena::CreateInternal< ::core::MsgPKG >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

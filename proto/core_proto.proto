@@ -35,3 +35,9 @@ message MsgBody
         RspVote stRspVote = 2;
     }
 }
+
+message MsgPKG
+{
+    MsgHead stHead = 1;
+    MsgBody stBody = 2;
+}

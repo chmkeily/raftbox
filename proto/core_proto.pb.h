@@ -41,7 +41,7 @@ struct TableStruct_core_5fproto_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[4]
+  static const ::google::protobuf::internal::ParseTable schema[5]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -55,6 +55,9 @@ extern MsgBodyDefaultTypeInternal _MsgBody_default_instance_;
 class MsgHead;
 class MsgHeadDefaultTypeInternal;
 extern MsgHeadDefaultTypeInternal _MsgHead_default_instance_;
+class MsgPKG;
+class MsgPKGDefaultTypeInternal;
+extern MsgPKGDefaultTypeInternal _MsgPKG_default_instance_;
 class ReqVote;
 class ReqVoteDefaultTypeInternal;
 extern ReqVoteDefaultTypeInternal _ReqVote_default_instance_;
@@ -66,6 +69,7 @@ namespace google {
 namespace protobuf {
 template<> ::core::MsgBody* Arena::CreateMaybeMessage<::core::MsgBody>(Arena*);
 template<> ::core::MsgHead* Arena::CreateMaybeMessage<::core::MsgHead>(Arena*);
+template<> ::core::MsgPKG* Arena::CreateMaybeMessage<::core::MsgPKG>(Arena*);
 template<> ::core::ReqVote* Arena::CreateMaybeMessage<::core::ReqVote>(Arena*);
 template<> ::core::RspVote* Arena::CreateMaybeMessage<::core::RspVote>(Arena*);
 }  // namespace protobuf
@@ -600,6 +604,131 @@ class MsgBody final :
 
   friend struct ::TableStruct_core_5fproto_2eproto;
 };
+// -------------------------------------------------------------------
+
+class MsgPKG final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.MsgPKG) */ {
+ public:
+  MsgPKG();
+  virtual ~MsgPKG();
+
+  MsgPKG(const MsgPKG& from);
+
+  inline MsgPKG& operator=(const MsgPKG& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  MsgPKG(MsgPKG&& from) noexcept
+    : MsgPKG() {
+    *this = ::std::move(from);
+  }
+
+  inline MsgPKG& operator=(MsgPKG&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const MsgPKG& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const MsgPKG* internal_default_instance() {
+    return reinterpret_cast<const MsgPKG*>(
+               &_MsgPKG_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  void Swap(MsgPKG* other);
+  friend void swap(MsgPKG& a, MsgPKG& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline MsgPKG* New() const final {
+    return CreateMaybeMessage<MsgPKG>(nullptr);
+  }
+
+  MsgPKG* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<MsgPKG>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const MsgPKG& from);
+  void MergeFrom(const MsgPKG& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(MsgPKG* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .core.MsgHead stHead = 1;
+  bool has_sthead() const;
+  void clear_sthead();
+  static const int kStHeadFieldNumber = 1;
+  const ::core::MsgHead& sthead() const;
+  ::core::MsgHead* release_sthead();
+  ::core::MsgHead* mutable_sthead();
+  void set_allocated_sthead(::core::MsgHead* sthead);
+
+  // .core.MsgBody stBody = 2;
+  bool has_stbody() const;
+  void clear_stbody();
+  static const int kStBodyFieldNumber = 2;
+  const ::core::MsgBody& stbody() const;
+  ::core::MsgBody* release_stbody();
+  ::core::MsgBody* mutable_stbody();
+  void set_allocated_stbody(::core::MsgBody* stbody);
+
+  // @@protoc_insertion_point(class_scope:core.MsgPKG)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::core::MsgHead* sthead_;
+  ::core::MsgBody* stbody_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_core_5fproto_2eproto;
+};
 // ===================================================================
 
 
@@ -854,9 +983,117 @@ inline void MsgBody::clear_has_stBody() {
 inline MsgBody::StBodyCase MsgBody::stBody_case() const {
   return MsgBody::StBodyCase(_oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// MsgPKG
+
+// .core.MsgHead stHead = 1;
+inline bool MsgPKG::has_sthead() const {
+  return this != internal_default_instance() && sthead_ != nullptr;
+}
+inline void MsgPKG::clear_sthead() {
+  if (GetArenaNoVirtual() == nullptr && sthead_ != nullptr) {
+    delete sthead_;
+  }
+  sthead_ = nullptr;
+}
+inline const ::core::MsgHead& MsgPKG::sthead() const {
+  const ::core::MsgHead* p = sthead_;
+  // @@protoc_insertion_point(field_get:core.MsgPKG.stHead)
+  return p != nullptr ? *p : *reinterpret_cast<const ::core::MsgHead*>(
+      &::core::_MsgHead_default_instance_);
+}
+inline ::core::MsgHead* MsgPKG::release_sthead() {
+  // @@protoc_insertion_point(field_release:core.MsgPKG.stHead)
+  
+  ::core::MsgHead* temp = sthead_;
+  sthead_ = nullptr;
+  return temp;
+}
+inline ::core::MsgHead* MsgPKG::mutable_sthead() {
+  
+  if (sthead_ == nullptr) {
+    auto* p = CreateMaybeMessage<::core::MsgHead>(GetArenaNoVirtual());
+    sthead_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:core.MsgPKG.stHead)
+  return sthead_;
+}
+inline void MsgPKG::set_allocated_sthead(::core::MsgHead* sthead) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete sthead_;
+  }
+  if (sthead) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      sthead = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, sthead, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  sthead_ = sthead;
+  // @@protoc_insertion_point(field_set_allocated:core.MsgPKG.stHead)
+}
+
+// .core.MsgBody stBody = 2;
+inline bool MsgPKG::has_stbody() const {
+  return this != internal_default_instance() && stbody_ != nullptr;
+}
+inline void MsgPKG::clear_stbody() {
+  if (GetArenaNoVirtual() == nullptr && stbody_ != nullptr) {
+    delete stbody_;
+  }
+  stbody_ = nullptr;
+}
+inline const ::core::MsgBody& MsgPKG::stbody() const {
+  const ::core::MsgBody* p = stbody_;
+  // @@protoc_insertion_point(field_get:core.MsgPKG.stBody)
+  return p != nullptr ? *p : *reinterpret_cast<const ::core::MsgBody*>(
+      &::core::_MsgBody_default_instance_);
+}
+inline ::core::MsgBody* MsgPKG::release_stbody() {
+  // @@protoc_insertion_point(field_release:core.MsgPKG.stBody)
+  
+  ::core::MsgBody* temp = stbody_;
+  stbody_ = nullptr;
+  return temp;
+}
+inline ::core::MsgBody* MsgPKG::mutable_stbody() {
+  
+  if (stbody_ == nullptr) {
+    auto* p = CreateMaybeMessage<::core::MsgBody>(GetArenaNoVirtual());
+    stbody_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:core.MsgPKG.stBody)
+  return stbody_;
+}
+inline void MsgPKG::set_allocated_stbody(::core::MsgBody* stbody) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete stbody_;
+  }
+  if (stbody) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      stbody = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, stbody, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  stbody_ = stbody;
+  // @@protoc_insertion_point(field_set_allocated:core.MsgPKG.stBody)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
