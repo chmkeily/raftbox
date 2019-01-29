@@ -41,43 +41,54 @@ struct TableStruct_core_5fproto_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[1]
+  static const ::google::protobuf::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
 };
 void AddDescriptors_core_5fproto_2eproto();
-class SSHeartBeat;
-class SSHeartBeatDefaultTypeInternal;
-extern SSHeartBeatDefaultTypeInternal _SSHeartBeat_default_instance_;
+namespace core {
+class CoreMsgBody;
+class CoreMsgBodyDefaultTypeInternal;
+extern CoreMsgBodyDefaultTypeInternal _CoreMsgBody_default_instance_;
+class ReqVote;
+class ReqVoteDefaultTypeInternal;
+extern ReqVoteDefaultTypeInternal _ReqVote_default_instance_;
+class RspVote;
+class RspVoteDefaultTypeInternal;
+extern RspVoteDefaultTypeInternal _RspVote_default_instance_;
+}  // namespace core
 namespace google {
 namespace protobuf {
-template<> ::SSHeartBeat* Arena::CreateMaybeMessage<::SSHeartBeat>(Arena*);
+template<> ::core::CoreMsgBody* Arena::CreateMaybeMessage<::core::CoreMsgBody>(Arena*);
+template<> ::core::ReqVote* Arena::CreateMaybeMessage<::core::ReqVote>(Arena*);
+template<> ::core::RspVote* Arena::CreateMaybeMessage<::core::RspVote>(Arena*);
 }  // namespace protobuf
 }  // namespace google
+namespace core {
 
 // ===================================================================
 
-class SSHeartBeat final :
-    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SSHeartBeat) */ {
+class ReqVote final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.ReqVote) */ {
  public:
-  SSHeartBeat();
-  virtual ~SSHeartBeat();
+  ReqVote();
+  virtual ~ReqVote();
 
-  SSHeartBeat(const SSHeartBeat& from);
+  ReqVote(const ReqVote& from);
 
-  inline SSHeartBeat& operator=(const SSHeartBeat& from) {
+  inline ReqVote& operator=(const ReqVote& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  SSHeartBeat(SSHeartBeat&& from) noexcept
-    : SSHeartBeat() {
+  ReqVote(ReqVote&& from) noexcept
+    : ReqVote() {
     *this = ::std::move(from);
   }
 
-  inline SSHeartBeat& operator=(SSHeartBeat&& from) noexcept {
+  inline ReqVote& operator=(ReqVote&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -89,34 +100,34 @@ class SSHeartBeat final :
   static const ::google::protobuf::Descriptor* descriptor() {
     return default_instance().GetDescriptor();
   }
-  static const SSHeartBeat& default_instance();
+  static const ReqVote& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const SSHeartBeat* internal_default_instance() {
-    return reinterpret_cast<const SSHeartBeat*>(
-               &_SSHeartBeat_default_instance_);
+  static inline const ReqVote* internal_default_instance() {
+    return reinterpret_cast<const ReqVote*>(
+               &_ReqVote_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(SSHeartBeat* other);
-  friend void swap(SSHeartBeat& a, SSHeartBeat& b) {
+  void Swap(ReqVote* other);
+  friend void swap(ReqVote& a, ReqVote& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline SSHeartBeat* New() const final {
-    return CreateMaybeMessage<SSHeartBeat>(nullptr);
+  inline ReqVote* New() const final {
+    return CreateMaybeMessage<ReqVote>(nullptr);
   }
 
-  SSHeartBeat* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<SSHeartBeat>(arena);
+  ReqVote* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ReqVote>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const SSHeartBeat& from);
-  void MergeFrom(const SSHeartBeat& from);
+  void CopyFrom(const ReqVote& from);
+  void MergeFrom(const ReqVote& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -138,7 +149,7 @@ class SSHeartBeat final :
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(SSHeartBeat* other);
+  void InternalSwap(ReqVote* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return nullptr;
@@ -154,26 +165,309 @@ class SSHeartBeat final :
 
   // accessors -------------------------------------------------------
 
-  // uint64 commitlogindex = 2;
-  void clear_commitlogindex();
-  static const int kCommitlogindexFieldNumber = 2;
-  ::google::protobuf::uint64 commitlogindex() const;
-  void set_commitlogindex(::google::protobuf::uint64 value);
+  // uint32 newterm = 1;
+  void clear_newterm();
+  static const int kNewtermFieldNumber = 1;
+  ::google::protobuf::uint32 newterm() const;
+  void set_newterm(::google::protobuf::uint32 value);
 
-  // uint32 nodeid = 1;
+  // uint32 nodeid = 2;
   void clear_nodeid();
-  static const int kNodeidFieldNumber = 1;
+  static const int kNodeidFieldNumber = 2;
   ::google::protobuf::uint32 nodeid() const;
   void set_nodeid(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:SSHeartBeat)
+  // uint64 commitlogindex = 3;
+  void clear_commitlogindex();
+  static const int kCommitlogindexFieldNumber = 3;
+  ::google::protobuf::uint64 commitlogindex() const;
+  void set_commitlogindex(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:core.ReqVote)
  private:
   class HasBitSetters;
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint64 commitlogindex_;
+  ::google::protobuf::uint32 newterm_;
   ::google::protobuf::uint32 nodeid_;
+  ::google::protobuf::uint64 commitlogindex_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_core_5fproto_2eproto;
+};
+// -------------------------------------------------------------------
+
+class RspVote final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.RspVote) */ {
+ public:
+  RspVote();
+  virtual ~RspVote();
+
+  RspVote(const RspVote& from);
+
+  inline RspVote& operator=(const RspVote& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  RspVote(RspVote&& from) noexcept
+    : RspVote() {
+    *this = ::std::move(from);
+  }
+
+  inline RspVote& operator=(RspVote&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const RspVote& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const RspVote* internal_default_instance() {
+    return reinterpret_cast<const RspVote*>(
+               &_RspVote_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  void Swap(RspVote* other);
+  friend void swap(RspVote& a, RspVote& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline RspVote* New() const final {
+    return CreateMaybeMessage<RspVote>(nullptr);
+  }
+
+  RspVote* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<RspVote>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const RspVote& from);
+  void MergeFrom(const RspVote& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(RspVote* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // sint32 result = 1;
+  void clear_result();
+  static const int kResultFieldNumber = 1;
+  ::google::protobuf::int32 result() const;
+  void set_result(::google::protobuf::int32 value);
+
+  // uint32 newterm = 2;
+  void clear_newterm();
+  static const int kNewtermFieldNumber = 2;
+  ::google::protobuf::uint32 newterm() const;
+  void set_newterm(::google::protobuf::uint32 value);
+
+  // uint32 nodeid = 3;
+  void clear_nodeid();
+  static const int kNodeidFieldNumber = 3;
+  ::google::protobuf::uint32 nodeid() const;
+  void set_nodeid(::google::protobuf::uint32 value);
+
+  // uint32 leaderid = 4;
+  void clear_leaderid();
+  static const int kLeaderidFieldNumber = 4;
+  ::google::protobuf::uint32 leaderid() const;
+  void set_leaderid(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:core.RspVote)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::int32 result_;
+  ::google::protobuf::uint32 newterm_;
+  ::google::protobuf::uint32 nodeid_;
+  ::google::protobuf::uint32 leaderid_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_core_5fproto_2eproto;
+};
+// -------------------------------------------------------------------
+
+class CoreMsgBody final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:core.CoreMsgBody) */ {
+ public:
+  CoreMsgBody();
+  virtual ~CoreMsgBody();
+
+  CoreMsgBody(const CoreMsgBody& from);
+
+  inline CoreMsgBody& operator=(const CoreMsgBody& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  CoreMsgBody(CoreMsgBody&& from) noexcept
+    : CoreMsgBody() {
+    *this = ::std::move(from);
+  }
+
+  inline CoreMsgBody& operator=(CoreMsgBody&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const CoreMsgBody& default_instance();
+
+  enum StBodyCase {
+    kStReqVote = 1,
+    kStRspVote = 2,
+    STBODY_NOT_SET = 0,
+  };
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const CoreMsgBody* internal_default_instance() {
+    return reinterpret_cast<const CoreMsgBody*>(
+               &_CoreMsgBody_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(CoreMsgBody* other);
+  friend void swap(CoreMsgBody& a, CoreMsgBody& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline CoreMsgBody* New() const final {
+    return CreateMaybeMessage<CoreMsgBody>(nullptr);
+  }
+
+  CoreMsgBody* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<CoreMsgBody>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const CoreMsgBody& from);
+  void MergeFrom(const CoreMsgBody& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  static const char* _InternalParse(const char* begin, const char* end, void* object, ::google::protobuf::internal::ParseContext* ctx);
+  ::google::protobuf::internal::ParseFunc _ParseFunc() const final { return _InternalParse; }
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(CoreMsgBody* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // .core.ReqVote stReqVote = 1;
+  bool has_streqvote() const;
+  void clear_streqvote();
+  static const int kStReqVoteFieldNumber = 1;
+  const ::core::ReqVote& streqvote() const;
+  ::core::ReqVote* release_streqvote();
+  ::core::ReqVote* mutable_streqvote();
+  void set_allocated_streqvote(::core::ReqVote* streqvote);
+
+  // .core.RspVote stRspVote = 2;
+  bool has_strspvote() const;
+  void clear_strspvote();
+  static const int kStRspVoteFieldNumber = 2;
+  const ::core::RspVote& strspvote() const;
+  ::core::RspVote* release_strspvote();
+  ::core::RspVote* mutable_strspvote();
+  void set_allocated_strspvote(::core::RspVote* strspvote);
+
+  void clear_stBody();
+  StBodyCase stBody_case() const;
+  // @@protoc_insertion_point(class_scope:core.CoreMsgBody)
+ private:
+  class HasBitSetters;
+  void set_has_streqvote();
+  void set_has_strspvote();
+
+  inline bool has_stBody() const;
+  inline void clear_has_stBody();
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  union StBodyUnion {
+    StBodyUnion() {}
+    ::core::ReqVote* streqvote_;
+    ::core::RspVote* strspvote_;
+  } stBody_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  ::google::protobuf::uint32 _oneof_case_[1];
+
   friend struct ::TableStruct_core_5fproto_2eproto;
 };
 // ===================================================================
@@ -185,42 +479,216 @@ class SSHeartBeat final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// SSHeartBeat
+// ReqVote
 
-// uint32 nodeid = 1;
-inline void SSHeartBeat::clear_nodeid() {
+// uint32 newterm = 1;
+inline void ReqVote::clear_newterm() {
+  newterm_ = 0u;
+}
+inline ::google::protobuf::uint32 ReqVote::newterm() const {
+  // @@protoc_insertion_point(field_get:core.ReqVote.newterm)
+  return newterm_;
+}
+inline void ReqVote::set_newterm(::google::protobuf::uint32 value) {
+  
+  newterm_ = value;
+  // @@protoc_insertion_point(field_set:core.ReqVote.newterm)
+}
+
+// uint32 nodeid = 2;
+inline void ReqVote::clear_nodeid() {
   nodeid_ = 0u;
 }
-inline ::google::protobuf::uint32 SSHeartBeat::nodeid() const {
-  // @@protoc_insertion_point(field_get:SSHeartBeat.nodeid)
+inline ::google::protobuf::uint32 ReqVote::nodeid() const {
+  // @@protoc_insertion_point(field_get:core.ReqVote.nodeid)
   return nodeid_;
 }
-inline void SSHeartBeat::set_nodeid(::google::protobuf::uint32 value) {
+inline void ReqVote::set_nodeid(::google::protobuf::uint32 value) {
   
   nodeid_ = value;
-  // @@protoc_insertion_point(field_set:SSHeartBeat.nodeid)
+  // @@protoc_insertion_point(field_set:core.ReqVote.nodeid)
 }
 
-// uint64 commitlogindex = 2;
-inline void SSHeartBeat::clear_commitlogindex() {
+// uint64 commitlogindex = 3;
+inline void ReqVote::clear_commitlogindex() {
   commitlogindex_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 SSHeartBeat::commitlogindex() const {
-  // @@protoc_insertion_point(field_get:SSHeartBeat.commitlogindex)
+inline ::google::protobuf::uint64 ReqVote::commitlogindex() const {
+  // @@protoc_insertion_point(field_get:core.ReqVote.commitlogindex)
   return commitlogindex_;
 }
-inline void SSHeartBeat::set_commitlogindex(::google::protobuf::uint64 value) {
+inline void ReqVote::set_commitlogindex(::google::protobuf::uint64 value) {
   
   commitlogindex_ = value;
-  // @@protoc_insertion_point(field_set:SSHeartBeat.commitlogindex)
+  // @@protoc_insertion_point(field_set:core.ReqVote.commitlogindex)
 }
 
+// -------------------------------------------------------------------
+
+// RspVote
+
+// sint32 result = 1;
+inline void RspVote::clear_result() {
+  result_ = 0;
+}
+inline ::google::protobuf::int32 RspVote::result() const {
+  // @@protoc_insertion_point(field_get:core.RspVote.result)
+  return result_;
+}
+inline void RspVote::set_result(::google::protobuf::int32 value) {
+  
+  result_ = value;
+  // @@protoc_insertion_point(field_set:core.RspVote.result)
+}
+
+// uint32 newterm = 2;
+inline void RspVote::clear_newterm() {
+  newterm_ = 0u;
+}
+inline ::google::protobuf::uint32 RspVote::newterm() const {
+  // @@protoc_insertion_point(field_get:core.RspVote.newterm)
+  return newterm_;
+}
+inline void RspVote::set_newterm(::google::protobuf::uint32 value) {
+  
+  newterm_ = value;
+  // @@protoc_insertion_point(field_set:core.RspVote.newterm)
+}
+
+// uint32 nodeid = 3;
+inline void RspVote::clear_nodeid() {
+  nodeid_ = 0u;
+}
+inline ::google::protobuf::uint32 RspVote::nodeid() const {
+  // @@protoc_insertion_point(field_get:core.RspVote.nodeid)
+  return nodeid_;
+}
+inline void RspVote::set_nodeid(::google::protobuf::uint32 value) {
+  
+  nodeid_ = value;
+  // @@protoc_insertion_point(field_set:core.RspVote.nodeid)
+}
+
+// uint32 leaderid = 4;
+inline void RspVote::clear_leaderid() {
+  leaderid_ = 0u;
+}
+inline ::google::protobuf::uint32 RspVote::leaderid() const {
+  // @@protoc_insertion_point(field_get:core.RspVote.leaderid)
+  return leaderid_;
+}
+inline void RspVote::set_leaderid(::google::protobuf::uint32 value) {
+  
+  leaderid_ = value;
+  // @@protoc_insertion_point(field_set:core.RspVote.leaderid)
+}
+
+// -------------------------------------------------------------------
+
+// CoreMsgBody
+
+// .core.ReqVote stReqVote = 1;
+inline bool CoreMsgBody::has_streqvote() const {
+  return stBody_case() == kStReqVote;
+}
+inline void CoreMsgBody::set_has_streqvote() {
+  _oneof_case_[0] = kStReqVote;
+}
+inline void CoreMsgBody::clear_streqvote() {
+  if (has_streqvote()) {
+    delete stBody_.streqvote_;
+    clear_has_stBody();
+  }
+}
+inline ::core::ReqVote* CoreMsgBody::release_streqvote() {
+  // @@protoc_insertion_point(field_release:core.CoreMsgBody.stReqVote)
+  if (has_streqvote()) {
+    clear_has_stBody();
+      ::core::ReqVote* temp = stBody_.streqvote_;
+    stBody_.streqvote_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::core::ReqVote& CoreMsgBody::streqvote() const {
+  // @@protoc_insertion_point(field_get:core.CoreMsgBody.stReqVote)
+  return has_streqvote()
+      ? *stBody_.streqvote_
+      : *reinterpret_cast< ::core::ReqVote*>(&::core::_ReqVote_default_instance_);
+}
+inline ::core::ReqVote* CoreMsgBody::mutable_streqvote() {
+  if (!has_streqvote()) {
+    clear_stBody();
+    set_has_streqvote();
+    stBody_.streqvote_ = CreateMaybeMessage< ::core::ReqVote >(
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_mutable:core.CoreMsgBody.stReqVote)
+  return stBody_.streqvote_;
+}
+
+// .core.RspVote stRspVote = 2;
+inline bool CoreMsgBody::has_strspvote() const {
+  return stBody_case() == kStRspVote;
+}
+inline void CoreMsgBody::set_has_strspvote() {
+  _oneof_case_[0] = kStRspVote;
+}
+inline void CoreMsgBody::clear_strspvote() {
+  if (has_strspvote()) {
+    delete stBody_.strspvote_;
+    clear_has_stBody();
+  }
+}
+inline ::core::RspVote* CoreMsgBody::release_strspvote() {
+  // @@protoc_insertion_point(field_release:core.CoreMsgBody.stRspVote)
+  if (has_strspvote()) {
+    clear_has_stBody();
+      ::core::RspVote* temp = stBody_.strspvote_;
+    stBody_.strspvote_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::core::RspVote& CoreMsgBody::strspvote() const {
+  // @@protoc_insertion_point(field_get:core.CoreMsgBody.stRspVote)
+  return has_strspvote()
+      ? *stBody_.strspvote_
+      : *reinterpret_cast< ::core::RspVote*>(&::core::_RspVote_default_instance_);
+}
+inline ::core::RspVote* CoreMsgBody::mutable_strspvote() {
+  if (!has_strspvote()) {
+    clear_stBody();
+    set_has_strspvote();
+    stBody_.strspvote_ = CreateMaybeMessage< ::core::RspVote >(
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_mutable:core.CoreMsgBody.stRspVote)
+  return stBody_.strspvote_;
+}
+
+inline bool CoreMsgBody::has_stBody() const {
+  return stBody_case() != STBODY_NOT_SET;
+}
+inline void CoreMsgBody::clear_has_stBody() {
+  _oneof_case_[0] = STBODY_NOT_SET;
+}
+inline CoreMsgBody::StBodyCase CoreMsgBody::stBody_case() const {
+  return CoreMsgBody::StBodyCase(_oneof_case_[0]);
+}
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace core
 
 // @@protoc_insertion_point(global_scope)
 

@@ -16,64 +16,136 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-class SSHeartBeatDefaultTypeInternal {
+extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ReqVote_core_5fproto_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_core_5fproto_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_RspVote_core_5fproto_2eproto;
+namespace core {
+class ReqVoteDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SSHeartBeat> _instance;
-} _SSHeartBeat_default_instance_;
-static void InitDefaultsSSHeartBeat_core_5fproto_2eproto() {
+  ::google::protobuf::internal::ExplicitlyConstructed<ReqVote> _instance;
+} _ReqVote_default_instance_;
+class RspVoteDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<RspVote> _instance;
+} _RspVote_default_instance_;
+class CoreMsgBodyDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<CoreMsgBody> _instance;
+  const ::core::ReqVote* streqvote_;
+  const ::core::RspVote* strspvote_;
+} _CoreMsgBody_default_instance_;
+}  // namespace core
+static void InitDefaultsReqVote_core_5fproto_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_SSHeartBeat_default_instance_;
-    new (ptr) ::SSHeartBeat();
+    void* ptr = &::core::_ReqVote_default_instance_;
+    new (ptr) ::core::ReqVote();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::SSHeartBeat::InitAsDefaultInstance();
+  ::core::ReqVote::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_SSHeartBeat_core_5fproto_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsSSHeartBeat_core_5fproto_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_ReqVote_core_5fproto_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsReqVote_core_5fproto_2eproto}, {}};
+
+static void InitDefaultsRspVote_core_5fproto_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::core::_RspVote_default_instance_;
+    new (ptr) ::core::RspVote();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::core::RspVote::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_RspVote_core_5fproto_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsRspVote_core_5fproto_2eproto}, {}};
+
+static void InitDefaultsCoreMsgBody_core_5fproto_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::core::_CoreMsgBody_default_instance_;
+    new (ptr) ::core::CoreMsgBody();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::core::CoreMsgBody::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<2> scc_info_CoreMsgBody_core_5fproto_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsCoreMsgBody_core_5fproto_2eproto}, {
+      &scc_info_ReqVote_core_5fproto_2eproto.base,
+      &scc_info_RspVote_core_5fproto_2eproto.base,}};
 
 void InitDefaults_core_5fproto_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_SSHeartBeat_core_5fproto_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ReqVote_core_5fproto_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_RspVote_core_5fproto_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CoreMsgBody_core_5fproto_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata_core_5fproto_2eproto[1];
+::google::protobuf::Metadata file_level_metadata_core_5fproto_2eproto[3];
 constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_core_5fproto_2eproto = nullptr;
 constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_core_5fproto_2eproto = nullptr;
 
 const ::google::protobuf::uint32 TableStruct_core_5fproto_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::SSHeartBeat, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::core::ReqVote, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::SSHeartBeat, nodeid_),
-  PROTOBUF_FIELD_OFFSET(::SSHeartBeat, commitlogindex_),
+  PROTOBUF_FIELD_OFFSET(::core::ReqVote, newterm_),
+  PROTOBUF_FIELD_OFFSET(::core::ReqVote, nodeid_),
+  PROTOBUF_FIELD_OFFSET(::core::ReqVote, commitlogindex_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::core::RspVote, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::core::RspVote, result_),
+  PROTOBUF_FIELD_OFFSET(::core::RspVote, newterm_),
+  PROTOBUF_FIELD_OFFSET(::core::RspVote, nodeid_),
+  PROTOBUF_FIELD_OFFSET(::core::RspVote, leaderid_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::core::CoreMsgBody, _internal_metadata_),
+  ~0u,  // no _extensions_
+  PROTOBUF_FIELD_OFFSET(::core::CoreMsgBody, _oneof_case_[0]),
+  ~0u,  // no _weak_field_map_
+  offsetof(::core::CoreMsgBodyDefaultTypeInternal, streqvote_),
+  offsetof(::core::CoreMsgBodyDefaultTypeInternal, strspvote_),
+  PROTOBUF_FIELD_OFFSET(::core::CoreMsgBody, stBody_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::SSHeartBeat)},
+  { 0, -1, sizeof(::core::ReqVote)},
+  { 8, -1, sizeof(::core::RspVote)},
+  { 17, -1, sizeof(::core::CoreMsgBody)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::_SSHeartBeat_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::core::_ReqVote_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::core::_RspVote_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::core::_CoreMsgBody_default_instance_),
 };
 
 ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_core_5fproto_2eproto = {
   {}, AddDescriptors_core_5fproto_2eproto, "core_proto.proto", schemas,
   file_default_instances, TableStruct_core_5fproto_2eproto::offsets,
-  file_level_metadata_core_5fproto_2eproto, 1, file_level_enum_descriptors_core_5fproto_2eproto, file_level_service_descriptors_core_5fproto_2eproto,
+  file_level_metadata_core_5fproto_2eproto, 3, file_level_enum_descriptors_core_5fproto_2eproto, file_level_service_descriptors_core_5fproto_2eproto,
 };
 
 const char descriptor_table_protodef_core_5fproto_2eproto[] =
-  "\n\020core_proto.proto\"5\n\013SSHeartBeat\022\016\n\006nod"
-  "eid\030\001 \001(\r\022\026\n\016commitlogindex\030\002 \001(\004b\006proto"
-  "3"
+  "\n\020core_proto.proto\022\004core\"B\n\007ReqVote\022\017\n\007n"
+  "ewterm\030\001 \001(\r\022\016\n\006nodeid\030\002 \001(\r\022\026\n\016commitlo"
+  "gindex\030\003 \001(\004\"L\n\007RspVote\022\016\n\006result\030\001 \001(\021\022"
+  "\017\n\007newterm\030\002 \001(\r\022\016\n\006nodeid\030\003 \001(\r\022\020\n\010lead"
+  "erid\030\004 \001(\r\"_\n\013CoreMsgBody\022\"\n\tstReqVote\030\001"
+  " \001(\0132\r.core.ReqVoteH\000\022\"\n\tstRspVote\030\002 \001(\013"
+  "2\r.core.RspVoteH\000B\010\n\006stBodyb\006proto3"
   ;
 ::google::protobuf::internal::DescriptorTable descriptor_table_core_5fproto_2eproto = {
   false, InitDefaults_core_5fproto_2eproto, 
   descriptor_table_protodef_core_5fproto_2eproto,
-  "core_proto.proto", &assign_descriptors_table_core_5fproto_2eproto, 81,
+  "core_proto.proto", &assign_descriptors_table_core_5fproto_2eproto, 275,
 };
 
 void AddDescriptors_core_5fproto_2eproto() {
@@ -85,74 +157,76 @@ void AddDescriptors_core_5fproto_2eproto() {
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_core_5fproto_2eproto = []() { AddDescriptors_core_5fproto_2eproto(); return true; }();
+namespace core {
 
 // ===================================================================
 
-void SSHeartBeat::InitAsDefaultInstance() {
+void ReqVote::InitAsDefaultInstance() {
 }
-class SSHeartBeat::HasBitSetters {
+class ReqVote::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SSHeartBeat::kNodeidFieldNumber;
-const int SSHeartBeat::kCommitlogindexFieldNumber;
+const int ReqVote::kNewtermFieldNumber;
+const int ReqVote::kNodeidFieldNumber;
+const int ReqVote::kCommitlogindexFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-SSHeartBeat::SSHeartBeat()
+ReqVote::ReqVote()
   : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:SSHeartBeat)
+  // @@protoc_insertion_point(constructor:core.ReqVote)
 }
-SSHeartBeat::SSHeartBeat(const SSHeartBeat& from)
+ReqVote::ReqVote(const ReqVote& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&commitlogindex_, &from.commitlogindex_,
-    static_cast<size_t>(reinterpret_cast<char*>(&nodeid_) -
-    reinterpret_cast<char*>(&commitlogindex_)) + sizeof(nodeid_));
-  // @@protoc_insertion_point(copy_constructor:SSHeartBeat)
+  ::memcpy(&newterm_, &from.newterm_,
+    static_cast<size_t>(reinterpret_cast<char*>(&commitlogindex_) -
+    reinterpret_cast<char*>(&newterm_)) + sizeof(commitlogindex_));
+  // @@protoc_insertion_point(copy_constructor:core.ReqVote)
 }
 
-void SSHeartBeat::SharedCtor() {
-  ::memset(&commitlogindex_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&nodeid_) -
-      reinterpret_cast<char*>(&commitlogindex_)) + sizeof(nodeid_));
+void ReqVote::SharedCtor() {
+  ::memset(&newterm_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&commitlogindex_) -
+      reinterpret_cast<char*>(&newterm_)) + sizeof(commitlogindex_));
 }
 
-SSHeartBeat::~SSHeartBeat() {
-  // @@protoc_insertion_point(destructor:SSHeartBeat)
+ReqVote::~ReqVote() {
+  // @@protoc_insertion_point(destructor:core.ReqVote)
   SharedDtor();
 }
 
-void SSHeartBeat::SharedDtor() {
+void ReqVote::SharedDtor() {
 }
 
-void SSHeartBeat::SetCachedSize(int size) const {
+void ReqVote::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const SSHeartBeat& SSHeartBeat::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SSHeartBeat_core_5fproto_2eproto.base);
+const ReqVote& ReqVote::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ReqVote_core_5fproto_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void SSHeartBeat::Clear() {
-// @@protoc_insertion_point(message_clear_start:SSHeartBeat)
+void ReqVote::Clear() {
+// @@protoc_insertion_point(message_clear_start:core.ReqVote)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&commitlogindex_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&nodeid_) -
-      reinterpret_cast<char*>(&commitlogindex_)) + sizeof(nodeid_));
+  ::memset(&newterm_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&commitlogindex_) -
+      reinterpret_cast<char*>(&newterm_)) + sizeof(commitlogindex_));
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SSHeartBeat::_InternalParse(const char* begin, const char* end, void* object,
+const char* ReqVote::_InternalParse(const char* begin, const char* end, void* object,
                   ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SSHeartBeat*>(object);
+  auto msg = static_cast<ReqVote*>(object);
   ::google::protobuf::int32 size; (void)size;
   int depth; (void)depth;
   ::google::protobuf::uint32 tag;
@@ -162,16 +236,23 @@ const char* SSHeartBeat::_InternalParse(const char* begin, const char* end, void
     ptr = ::google::protobuf::io::Parse32(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // uint32 nodeid = 1;
+      // uint32 newterm = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_newterm(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 nodeid = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
         msg->set_nodeid(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // uint64 commitlogindex = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+      // uint64 commitlogindex = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
         msg->set_commitlogindex(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
@@ -193,19 +274,32 @@ const char* SSHeartBeat::_InternalParse(const char* begin, const char* end, void
   return ptr;
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SSHeartBeat::MergePartialFromCodedStream(
+bool ReqVote::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:SSHeartBeat)
+  // @@protoc_insertion_point(parse_start:core.ReqVote)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 nodeid = 1;
+      // uint32 newterm = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &newterm_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 nodeid = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -216,9 +310,9 @@ bool SSHeartBeat::MergePartialFromCodedStream(
         break;
       }
 
-      // uint64 commitlogindex = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+      // uint64 commitlogindex = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -241,64 +335,74 @@ bool SSHeartBeat::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:SSHeartBeat)
+  // @@protoc_insertion_point(parse_success:core.ReqVote)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:SSHeartBeat)
+  // @@protoc_insertion_point(parse_failure:core.ReqVote)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void SSHeartBeat::SerializeWithCachedSizes(
+void ReqVote::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:SSHeartBeat)
+  // @@protoc_insertion_point(serialize_start:core.ReqVote)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 nodeid = 1;
-  if (this->nodeid() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->nodeid(), output);
+  // uint32 newterm = 1;
+  if (this->newterm() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->newterm(), output);
   }
 
-  // uint64 commitlogindex = 2;
+  // uint32 nodeid = 2;
+  if (this->nodeid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->nodeid(), output);
+  }
+
+  // uint64 commitlogindex = 3;
   if (this->commitlogindex() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->commitlogindex(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->commitlogindex(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:SSHeartBeat)
+  // @@protoc_insertion_point(serialize_end:core.ReqVote)
 }
 
-::google::protobuf::uint8* SSHeartBeat::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* ReqVote::InternalSerializeWithCachedSizesToArray(
     ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:SSHeartBeat)
+  // @@protoc_insertion_point(serialize_to_array_start:core.ReqVote)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 nodeid = 1;
-  if (this->nodeid() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->nodeid(), target);
+  // uint32 newterm = 1;
+  if (this->newterm() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->newterm(), target);
   }
 
-  // uint64 commitlogindex = 2;
+  // uint32 nodeid = 2;
+  if (this->nodeid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->nodeid(), target);
+  }
+
+  // uint64 commitlogindex = 3;
   if (this->commitlogindex() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->commitlogindex(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->commitlogindex(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:SSHeartBeat)
+  // @@protoc_insertion_point(serialize_to_array_end:core.ReqVote)
   return target;
 }
 
-size_t SSHeartBeat::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:SSHeartBeat)
+size_t ReqVote::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:core.ReqVote)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -310,18 +414,25 @@ size_t SSHeartBeat::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // uint64 commitlogindex = 2;
-  if (this->commitlogindex() != 0) {
+  // uint32 newterm = 1;
+  if (this->newterm() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->commitlogindex());
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->newterm());
   }
 
-  // uint32 nodeid = 1;
+  // uint32 nodeid = 2;
   if (this->nodeid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->nodeid());
+  }
+
+  // uint64 commitlogindex = 3;
+  if (this->commitlogindex() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->commitlogindex());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -329,76 +440,889 @@ size_t SSHeartBeat::ByteSizeLong() const {
   return total_size;
 }
 
-void SSHeartBeat::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:SSHeartBeat)
+void ReqVote::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:core.ReqVote)
   GOOGLE_DCHECK_NE(&from, this);
-  const SSHeartBeat* source =
-      ::google::protobuf::DynamicCastToGenerated<SSHeartBeat>(
+  const ReqVote* source =
+      ::google::protobuf::DynamicCastToGenerated<ReqVote>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SSHeartBeat)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:core.ReqVote)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:SSHeartBeat)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:core.ReqVote)
     MergeFrom(*source);
   }
 }
 
-void SSHeartBeat::MergeFrom(const SSHeartBeat& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:SSHeartBeat)
+void ReqVote::MergeFrom(const ReqVote& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:core.ReqVote)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.commitlogindex() != 0) {
-    set_commitlogindex(from.commitlogindex());
+  if (from.newterm() != 0) {
+    set_newterm(from.newterm());
   }
   if (from.nodeid() != 0) {
     set_nodeid(from.nodeid());
   }
+  if (from.commitlogindex() != 0) {
+    set_commitlogindex(from.commitlogindex());
+  }
 }
 
-void SSHeartBeat::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:SSHeartBeat)
+void ReqVote::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:core.ReqVote)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void SSHeartBeat::CopyFrom(const SSHeartBeat& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:SSHeartBeat)
+void ReqVote::CopyFrom(const ReqVote& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:core.ReqVote)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SSHeartBeat::IsInitialized() const {
+bool ReqVote::IsInitialized() const {
   return true;
 }
 
-void SSHeartBeat::Swap(SSHeartBeat* other) {
+void ReqVote::Swap(ReqVote* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void SSHeartBeat::InternalSwap(SSHeartBeat* other) {
+void ReqVote::InternalSwap(ReqVote* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(commitlogindex_, other->commitlogindex_);
+  swap(newterm_, other->newterm_);
   swap(nodeid_, other->nodeid_);
+  swap(commitlogindex_, other->commitlogindex_);
 }
 
-::google::protobuf::Metadata SSHeartBeat::GetMetadata() const {
+::google::protobuf::Metadata ReqVote::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_core_5fproto_2eproto);
+  return ::file_level_metadata_core_5fproto_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void RspVote::InitAsDefaultInstance() {
+}
+class RspVote::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int RspVote::kResultFieldNumber;
+const int RspVote::kNewtermFieldNumber;
+const int RspVote::kNodeidFieldNumber;
+const int RspVote::kLeaderidFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+RspVote::RspVote()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:core.RspVote)
+}
+RspVote::RspVote(const RspVote& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&result_, &from.result_,
+    static_cast<size_t>(reinterpret_cast<char*>(&leaderid_) -
+    reinterpret_cast<char*>(&result_)) + sizeof(leaderid_));
+  // @@protoc_insertion_point(copy_constructor:core.RspVote)
+}
+
+void RspVote::SharedCtor() {
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&leaderid_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(leaderid_));
+}
+
+RspVote::~RspVote() {
+  // @@protoc_insertion_point(destructor:core.RspVote)
+  SharedDtor();
+}
+
+void RspVote::SharedDtor() {
+}
+
+void RspVote::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const RspVote& RspVote::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_RspVote_core_5fproto_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void RspVote::Clear() {
+// @@protoc_insertion_point(message_clear_start:core.RspVote)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&result_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&leaderid_) -
+      reinterpret_cast<char*>(&result_)) + sizeof(leaderid_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* RspVote::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<RspVote*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // sint32 result = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_result(::google::protobuf::internal::ReadVarintZigZag32(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 newterm = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_newterm(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 nodeid = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        msg->set_nodeid(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 leaderid = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_leaderid(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool RspVote::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:core.RspVote)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // sint32 result = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_SINT32>(
+                 input, &result_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 newterm = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &newterm_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 nodeid = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &nodeid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 leaderid = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &leaderid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:core.RspVote)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:core.RspVote)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void RspVote::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:core.RspVote)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // sint32 result = 1;
+  if (this->result() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteSInt32(1, this->result(), output);
+  }
+
+  // uint32 newterm = 2;
+  if (this->newterm() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->newterm(), output);
+  }
+
+  // uint32 nodeid = 3;
+  if (this->nodeid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->nodeid(), output);
+  }
+
+  // uint32 leaderid = 4;
+  if (this->leaderid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->leaderid(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:core.RspVote)
+}
+
+::google::protobuf::uint8* RspVote::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:core.RspVote)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // sint32 result = 1;
+  if (this->result() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteSInt32ToArray(1, this->result(), target);
+  }
+
+  // uint32 newterm = 2;
+  if (this->newterm() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->newterm(), target);
+  }
+
+  // uint32 nodeid = 3;
+  if (this->nodeid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->nodeid(), target);
+  }
+
+  // uint32 leaderid = 4;
+  if (this->leaderid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->leaderid(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:core.RspVote)
+  return target;
+}
+
+size_t RspVote::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:core.RspVote)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // sint32 result = 1;
+  if (this->result() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::SInt32Size(
+        this->result());
+  }
+
+  // uint32 newterm = 2;
+  if (this->newterm() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->newterm());
+  }
+
+  // uint32 nodeid = 3;
+  if (this->nodeid() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->nodeid());
+  }
+
+  // uint32 leaderid = 4;
+  if (this->leaderid() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->leaderid());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void RspVote::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:core.RspVote)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RspVote* source =
+      ::google::protobuf::DynamicCastToGenerated<RspVote>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:core.RspVote)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:core.RspVote)
+    MergeFrom(*source);
+  }
+}
+
+void RspVote::MergeFrom(const RspVote& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:core.RspVote)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.result() != 0) {
+    set_result(from.result());
+  }
+  if (from.newterm() != 0) {
+    set_newterm(from.newterm());
+  }
+  if (from.nodeid() != 0) {
+    set_nodeid(from.nodeid());
+  }
+  if (from.leaderid() != 0) {
+    set_leaderid(from.leaderid());
+  }
+}
+
+void RspVote::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:core.RspVote)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void RspVote::CopyFrom(const RspVote& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:core.RspVote)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool RspVote::IsInitialized() const {
+  return true;
+}
+
+void RspVote::Swap(RspVote* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void RspVote::InternalSwap(RspVote* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(result_, other->result_);
+  swap(newterm_, other->newterm_);
+  swap(nodeid_, other->nodeid_);
+  swap(leaderid_, other->leaderid_);
+}
+
+::google::protobuf::Metadata RspVote::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_core_5fproto_2eproto);
+  return ::file_level_metadata_core_5fproto_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+void CoreMsgBody::InitAsDefaultInstance() {
+  ::core::_CoreMsgBody_default_instance_.streqvote_ = const_cast< ::core::ReqVote*>(
+      ::core::ReqVote::internal_default_instance());
+  ::core::_CoreMsgBody_default_instance_.strspvote_ = const_cast< ::core::RspVote*>(
+      ::core::RspVote::internal_default_instance());
+}
+class CoreMsgBody::HasBitSetters {
+ public:
+  static const ::core::ReqVote& streqvote(const CoreMsgBody* msg);
+  static const ::core::RspVote& strspvote(const CoreMsgBody* msg);
+};
+
+const ::core::ReqVote&
+CoreMsgBody::HasBitSetters::streqvote(const CoreMsgBody* msg) {
+  return *msg->stBody_.streqvote_;
+}
+const ::core::RspVote&
+CoreMsgBody::HasBitSetters::strspvote(const CoreMsgBody* msg) {
+  return *msg->stBody_.strspvote_;
+}
+void CoreMsgBody::set_allocated_streqvote(::core::ReqVote* streqvote) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_stBody();
+  if (streqvote) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      streqvote = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, streqvote, submessage_arena);
+    }
+    set_has_streqvote();
+    stBody_.streqvote_ = streqvote;
+  }
+  // @@protoc_insertion_point(field_set_allocated:core.CoreMsgBody.stReqVote)
+}
+void CoreMsgBody::set_allocated_strspvote(::core::RspVote* strspvote) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  clear_stBody();
+  if (strspvote) {
+    ::google::protobuf::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      strspvote = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, strspvote, submessage_arena);
+    }
+    set_has_strspvote();
+    stBody_.strspvote_ = strspvote;
+  }
+  // @@protoc_insertion_point(field_set_allocated:core.CoreMsgBody.stRspVote)
+}
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CoreMsgBody::kStReqVoteFieldNumber;
+const int CoreMsgBody::kStRspVoteFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CoreMsgBody::CoreMsgBody()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:core.CoreMsgBody)
+}
+CoreMsgBody::CoreMsgBody(const CoreMsgBody& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  clear_has_stBody();
+  switch (from.stBody_case()) {
+    case kStReqVote: {
+      mutable_streqvote()->::core::ReqVote::MergeFrom(from.streqvote());
+      break;
+    }
+    case kStRspVote: {
+      mutable_strspvote()->::core::RspVote::MergeFrom(from.strspvote());
+      break;
+    }
+    case STBODY_NOT_SET: {
+      break;
+    }
+  }
+  // @@protoc_insertion_point(copy_constructor:core.CoreMsgBody)
+}
+
+void CoreMsgBody::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_CoreMsgBody_core_5fproto_2eproto.base);
+  clear_has_stBody();
+}
+
+CoreMsgBody::~CoreMsgBody() {
+  // @@protoc_insertion_point(destructor:core.CoreMsgBody)
+  SharedDtor();
+}
+
+void CoreMsgBody::SharedDtor() {
+  if (has_stBody()) {
+    clear_stBody();
+  }
+}
+
+void CoreMsgBody::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const CoreMsgBody& CoreMsgBody::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_CoreMsgBody_core_5fproto_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void CoreMsgBody::clear_stBody() {
+// @@protoc_insertion_point(one_of_clear_start:core.CoreMsgBody)
+  switch (stBody_case()) {
+    case kStReqVote: {
+      delete stBody_.streqvote_;
+      break;
+    }
+    case kStRspVote: {
+      delete stBody_.strspvote_;
+      break;
+    }
+    case STBODY_NOT_SET: {
+      break;
+    }
+  }
+  _oneof_case_[0] = STBODY_NOT_SET;
+}
+
+
+void CoreMsgBody::Clear() {
+// @@protoc_insertion_point(message_clear_start:core.CoreMsgBody)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  clear_stBody();
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* CoreMsgBody::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<CoreMsgBody*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .core.ReqVote stReqVote = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::core::ReqVote::_InternalParse;
+        object = msg->mutable_streqvote();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .core.RspVote stRspVote = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::core::RspVote::_InternalParse;
+        object = msg->mutable_strspvote();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool CoreMsgBody::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:core.CoreMsgBody)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // .core.ReqVote stReqVote = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_streqvote()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .core.RspVote stRspVote = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+               input, mutable_strspvote()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:core.CoreMsgBody)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:core.CoreMsgBody)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void CoreMsgBody::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:core.CoreMsgBody)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .core.ReqVote stReqVote = 1;
+  if (has_streqvote()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, HasBitSetters::streqvote(this), output);
+  }
+
+  // .core.RspVote stRspVote = 2;
+  if (has_strspvote()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      2, HasBitSetters::strspvote(this), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:core.CoreMsgBody)
+}
+
+::google::protobuf::uint8* CoreMsgBody::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:core.CoreMsgBody)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .core.ReqVote stReqVote = 1;
+  if (has_streqvote()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        1, HasBitSetters::streqvote(this), target);
+  }
+
+  // .core.RspVote stRspVote = 2;
+  if (has_strspvote()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        2, HasBitSetters::strspvote(this), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:core.CoreMsgBody)
+  return target;
+}
+
+size_t CoreMsgBody::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:core.CoreMsgBody)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  switch (stBody_case()) {
+    // .core.ReqVote stReqVote = 1;
+    case kStReqVote: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *stBody_.streqvote_);
+      break;
+    }
+    // .core.RspVote stRspVote = 2;
+    case kStRspVote: {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          *stBody_.strspvote_);
+      break;
+    }
+    case STBODY_NOT_SET: {
+      break;
+    }
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void CoreMsgBody::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:core.CoreMsgBody)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CoreMsgBody* source =
+      ::google::protobuf::DynamicCastToGenerated<CoreMsgBody>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:core.CoreMsgBody)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:core.CoreMsgBody)
+    MergeFrom(*source);
+  }
+}
+
+void CoreMsgBody::MergeFrom(const CoreMsgBody& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:core.CoreMsgBody)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  switch (from.stBody_case()) {
+    case kStReqVote: {
+      mutable_streqvote()->::core::ReqVote::MergeFrom(from.streqvote());
+      break;
+    }
+    case kStRspVote: {
+      mutable_strspvote()->::core::RspVote::MergeFrom(from.strspvote());
+      break;
+    }
+    case STBODY_NOT_SET: {
+      break;
+    }
+  }
+}
+
+void CoreMsgBody::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:core.CoreMsgBody)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CoreMsgBody::CopyFrom(const CoreMsgBody& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:core.CoreMsgBody)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CoreMsgBody::IsInitialized() const {
+  return true;
+}
+
+void CoreMsgBody::Swap(CoreMsgBody* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void CoreMsgBody::InternalSwap(CoreMsgBody* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(stBody_, other->stBody_);
+  swap(_oneof_case_[0], other->_oneof_case_[0]);
+}
+
+::google::protobuf::Metadata CoreMsgBody::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_core_5fproto_2eproto);
   return ::file_level_metadata_core_5fproto_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace core
 namespace google {
 namespace protobuf {
-template<> PROTOBUF_NOINLINE ::SSHeartBeat* Arena::CreateMaybeMessage< ::SSHeartBeat >(Arena* arena) {
-  return Arena::CreateInternal< ::SSHeartBeat >(arena);
+template<> PROTOBUF_NOINLINE ::core::ReqVote* Arena::CreateMaybeMessage< ::core::ReqVote >(Arena* arena) {
+  return Arena::CreateInternal< ::core::ReqVote >(arena);
+}
+template<> PROTOBUF_NOINLINE ::core::RspVote* Arena::CreateMaybeMessage< ::core::RspVote >(Arena* arena) {
+  return Arena::CreateInternal< ::core::RspVote >(arena);
+}
+template<> PROTOBUF_NOINLINE ::core::CoreMsgBody* Arena::CreateMaybeMessage< ::core::CoreMsgBody >(Arena* arena) {
+  return Arena::CreateInternal< ::core::CoreMsgBody >(arena);
 }
 }  // namespace protobuf
 }  // namespace google

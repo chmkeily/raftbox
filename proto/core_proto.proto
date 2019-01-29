@@ -1,7 +1,27 @@
 syntax="proto3";
 
-message SSHeartBeat
+package core;
+
+message ReqVote
 {
-    uint32 nodeid = 1;
-    uint64 commitlogindex = 2;
+    uint32 newterm = 1;
+    uint32 nodeid = 2;
+    uint64 commitlogindex = 3;
+}
+
+message RspVote
+{
+    sint32 result = 1;
+    uint32 newterm = 2;
+    uint32 nodeid = 3;
+    uint32 leaderid = 4;
+}
+
+message CoreMsgBody
+{
+    oneof stBody
+    {
+        ReqVote stReqVote = 1;
+        RspVote stRspVote = 2;
+    }
 }
